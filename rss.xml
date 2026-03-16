@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<rss version="2.0">
+
+<channel>
+  <title>Jcode Website</title>
+  <link>https://www.jcode-official.neocities.org</link>
+  <description>The official Jcode rss feed for you to keep up on news and announcements!</description>
+  <language>en-us</language>
+  <pubDate>Fri, 18 Apr 2025 10:00:00 CDT</pubDate>
+  <lastBuildDate>Fri, 18 Apr 2025 11:00:00 CDT</lastBuildDate>
+  <generator>Jcode Official</generator>
+
+  <item>
+    <title>Jcode Beta is Out!</title>
+    <link>https://jcode-official.neocities.org/newsroom?post=1</link>
+    <description>Jcode is now out for a editor preview at jcode-official.neocities.org!</description>
+    <guid isPermaLink="true">http://www.jcode-official.neocities.org</guid>
+    <pubDate>Thu, 18 Apr 2025 09:00:00 CDT</pubDate>
+  </item>
+
+  <item>
+    <title>Jcode RSS is here!</title>
+    <link>https://www.jcode-official.neocities.org</link>
+    <description>The official RSS feed is now out for Jcode! The feed URL is jcode-official.neocities.org/rss</description>
+    <guid isPermaLink="true">http://www.jcode-official.neocities.org</guid>
+    <pubDate>Thu, 18 Apr 2025 09:00:00 CDT</pubDate>
+  </item>
+
+</channel>
+</rss>

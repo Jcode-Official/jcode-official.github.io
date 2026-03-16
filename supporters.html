@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Credits</title>
+    <style>
+        body {
+            font-family: sans-serif;
+            margin: 0;
+            padding: 0;
+            color: #333;
+        }
+
+        .tool-nav {
+            background-color: #fff;
+            padding: 10px 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 1px solid #eee; /* Optional: Add a subtle border */
+        }
+
+        .tool-nav a {
+            color: #333;
+            text-decoration: none;
+            margin: 0 10px;
+        }
+
+        .tool-nav a.yellow {
+            color: #ffd700; 
+            font-weight: bold;
+        }
+		.tool-nav a.active {
+            color: #ffd700; /* Yellow accent for active link */
+            font-weight: bold;
+        }
+
+        .header {
+            background-color: #fff;
+            text-align: center;
+            padding: 50px 20px;
+        }
+
+        .header h1 {
+            color: #ffd700;
+            font-size: 3em;
+            margin-bottom: 10px;
+        }
+
+        .header p {
+            font-size: 1.2em;
+            margin-bottom: 20px;
+        }
+
+        .header .button {
+            background-color: #ffd700;
+            color: #fff;
+            padding: 15px 30px;
+            text-decoration: none;
+            border-radius: 10px;
+            font-weight: bold;
+        }
+
+        .why-jcode {
+            background-color: #fff;
+            padding: 50px 20px;
+            text-align: center;
+        }
+
+        .why-jcode .container {
+            display: flex;
+            justify-content: space-around;
+            max-width: 1200px;
+            margin: 0 auto;
+            flex-wrap: wrap;
+        }
+
+        .why-jcode .column {
+            width: 300px;
+            margin: 20px;
+        }
+
+        .why-jcode .column img {
+            width: 50px;
+            height: 50px;
+            background-color: #ffd700;
+            border-radius: 50%;
+            padding: 10px;
+        }
+
+        .programs {
+            background-color: #fff8e1;
+            padding: 50px 20px;
+            text-align: center;
+        }
+
+        .programs .program-card {
+            background-color: #fff;
+            border-radius: 10px;
+            padding: 20px;
+            margin: 20px auto;
+            max-width: 300px;
+        }
+
+        .programs .program-card .button {
+            background-color: #ffd700;
+            color: #fff;
+            padding: 10px 20px;
+            text-decoration: none;
+            border-radius: 5px;
+            font-weight: bold;
+        }
+
+        .testimonials {
+            background-color: #fff;
+            padding: 50px 20px;
+            text-align: center;
+        }
+
+        .about {
+            background-color: #fff8e1;
+            padding: 50px 20px;
+            text-align: center;
+        }
+
+        .contact {
+            background-color: #fff;
+            padding: 50px 20px;
+            text-align: center;
+        }
+
+        footer {
+            background-color: #fffacd;
+            padding: 20px;
+            text-align: center;
+        }
+		.tab-container {
+    display: flex; /* Use flexbox to align items horizontally */
+    align-items: center; /* Vertically align items in the center */
+}
+
+.logo-tab {
+    height: 40px; /* Adjust the height as needed */
+    margin-right: 10px; /* Add some space between the logo and tabs */
+}
+.logo-body-big {
+	height: 140px;
+}
+
+.tab-opened {
+    background-color: #ffd700;
+    color: #fff;
+    padding: 10px 15px;
+    border-radius: 5px 5px 0 0;
+    border-bottom: 2px solid #fff;
+    font-weight: bold;
+    cursor: default;
+}
+
+.tab {
+    background-color: #f0f0f0;
+    color: #333;
+    padding: 10px 15px;
+    border-radius: 5px 5px 0 0;
+    cursor: pointer;
+    border-bottom: 2px solid #f0f0f0;
+}
+
+.tab:hover {
+    background-color: #e0e0e0;
+}
+hr.solid {
+  border-top: 3px solid #bbb;
+}
+.profile-pic-nav {
+            width: 40px; /* Adjust size as needed */
+            height: 40px;
+            border-radius: 50%;
+            object-fit: cover;
+            margin-left: 10px; /* Adjust spacing */
+            cursor: pointer; /* Indicate it's clickable */
+        }
+
+        .dropdown-menu {
+            position: absolute;
+            top: 55px; /* Adjust based on your nav height */
+            right: 20px; /* Adjust based on your nav padding */
+            background-color: #fff;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            list-style: none;
+            padding: 10px 0;
+            margin: 0;
+            z-index: 10; /* Ensure it's on top */
+            display: none; /* Initially hidden */
+        }
+
+        .dropdown-menu li a {
+            display: block;
+            padding: 10px 20px;
+            text-decoration: none;
+            color: #333;
+        }
+
+        .dropdown-menu li a:hover {
+            background-color: #f0f0f0;
+        }
+		
+    </style>
+</head>
+<body>
+
+    <nav class="tool-nav">
+        <img src="assets/logo.png" alt="Jcode Logo" class="logo-tab">
+        <a href="index.html" class = "tab">Home</a>
+        <a href="mailto:contactjbluebird@icloud.com" class = "tab">Contact</a>
+        <a href="credits.html" class = "tab">Credits</a>
+        <a href="Jcode 2.0/index.html" class = "tab">Try out Jcode</a>
+    </nav>
+	<div style="text-align: center;">
+		<h1>Supporters</h1>
+        <p>At Jcode, we are incredibly thankful for our supporters. Thank you to:</p>
+        <ul>
+            <li><a href="https://scratch.mit.edu/users/Scratchtheguy1/">Scratchtheguy1</a>/<a href="https://forum.snap.berkeley.edu/u/snaptheguy1">Snaptheguy1</a><img src="flags/bulgaria.svg" width="24", height="15"></img></li>
+            <li><a href="https://scratch.mit.edu/users/Beisbol2-0/">Beisbol2-0</a><img src="flags/spain.svg" width="24", height="15"></img></li>
+            <li><a href="https://scratch.mit.edu/users/Gillianders/">Gillianders</a><img src="flags/germany.svg" width="24", height="15"></img></li>
+            <li><a href="https://scratch.mit.edu/users/gamerdillproxd/">gamerdillproxd</a><img src="flags/united-states.svg" width="24", height="15"></img></li>
+            <li><a href="https://penguinmod.com/profile?user=MDSgamesT">MDSgamesT</a><img src="flags/united-kingdom.svg" width="24", height="15"></img></li>
+            <li><a href="https://scratch.mit.edu/users/JBlueBro/">JBlueBro</a><img src="flags/united-states.svg" width="24", height="15"></img></li>
+            <p>Not on this list? Please <a href="mailto:contactjbluebird@icloud.com">tell me about it</a>!</p>
+        </ul>
+	</div>
+    <footer>
+        <p>&copy; Jcode 2025</p>
+    </footer>
+</body>
+</html>

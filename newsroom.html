@@ -1,0 +1,386 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jcode Newsroom</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        body {
+            font-family: sans-serif;
+            margin: 0;
+            padding: 0;
+            color: #333;
+        }
+
+        .tool-nav {
+            background-color: #fff;
+            padding: 10px 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 1px solid #eee; /* Optional: Add a subtle border */
+        }
+
+        .tool-nav a {
+            color: #333;
+            text-decoration: none;
+            margin: 0 10px;
+        }
+
+        .tool-nav a.yellow {
+            color: #ffd700;
+            font-weight: bold;
+        }
+        .tool-nav a.active {
+            color: #ffd700; /* Yellow accent for active link */
+            font-weight: bold;
+        }
+
+        .header {
+            background-color: #fff;
+            text-align: center;
+            padding: 50px 20px;
+        }
+
+        .header h1 {
+            color: #ffd700;
+            font-size: 3em;
+            margin-bottom: 10px;
+        }
+
+        .header p {
+            font-size: 1.2em;
+            margin-bottom: 20px;
+        }
+
+        .header .button {
+            background-color: #ffd700;
+            color: #fff;
+            padding: 15px 30px;
+            text-decoration: none;
+            border-radius: 10px;
+            font-weight: bold;
+        }
+
+        .why-jcode {
+            background-color: #fff;
+            padding: 50px 20px;
+            text-align: center;
+        }
+
+        .why-jcode .container {
+            display: flex;
+            justify-content: space-around;
+            max-width: 1200px;
+            margin: 0 auto;
+            flex-wrap: wrap;
+        }
+
+        .why-jcode .column {
+            width: 300px;
+            margin: 20px;
+        }
+
+        .why-jcode .column img {
+            width: 50px;
+            height: 50px;
+            background-color: #ffd700;
+            border-radius: 50%;
+            padding: 10px;
+        }
+
+        .programs {
+            background-color: #fff8e1;
+            padding: 50px 20px;
+            text-align: center;
+        }
+
+        .programs .program-card {
+            background-color: #fff;
+            border-radius: 10px;
+            padding: 20px;
+            margin: 20px auto;
+            max-width: 300px;
+        }
+
+        .programs .program-card .button {
+            background-color: #ffd700;
+            color: #fff;
+            padding: 10px 20px;
+            text-decoration: none;
+            border-radius: 5px;
+            font-weight: bold;
+        }
+
+        .testimonials {
+            background-color: #fff;
+            padding: 50px 20px;
+            text-align: center;
+        }
+
+        .about {
+            background-color: #fff8e1;
+            padding: 50px 20px;
+            text-align: center;
+        }
+
+        .contact {
+            background-color: #fff;
+            padding: 50px 20px;
+            text-align: center;
+        }
+
+        footer {
+            background-color: #fffacd;
+            padding: 20px;
+            text-align: center;
+        }
+        .tab-container {
+    display: flex; /* Use flexbox to align items horizontally */
+    align-items: center; /* Vertically align items in the center */
+}
+
+.logo-tab {
+    height: 40px; /* Adjust the height as needed */
+    margin-right: 10px; /* Add some space between the logo and tabs */
+}
+.logo-body-big {
+    height: 140px;
+}
+
+.tab-opened {
+    background-color: #ffd700;
+    color: #fff;
+    padding: 10px 15px;
+    border-radius: 5px 5px 0 0;
+    border-bottom: 2px solid #fff;
+    font-weight: bold;
+    cursor: default;
+}
+
+.tab {
+    background-color: #f0f0f0;
+    color: #333;
+    padding: 10px 15px;
+    border-radius: 5px 5px 0 0;
+    cursor: pointer;
+    border-bottom: 2px solid #f0f0f0;
+}
+
+.tab:hover {
+    background-color: #e0e0e0;
+}
+hr.solid {
+  border-top: 3px solid #bbb;
+}
+.profile-pic-nav {
+            width: 40px; /* Adjust size as needed */
+            height: 40px;
+            border-radius: 50%;
+            object-fit: cover;
+            margin-left: 10px; /* Adjust spacing */
+            cursor: pointer; /* Indicate it's clickable */
+        }
+
+        .dropdown-menu {
+            position: absolute;
+            top: 55px; /* Adjust based on your nav height */
+            right: 20px; /* Adjust based on your nav padding */
+            background-color: #fff;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            list-style: none;
+            padding: 10px 0;
+            margin: 0;
+            z-index: 10; /* Ensure it's on top */
+            display: none; /* Initially hidden */
+        }
+
+        .dropdown-menu li a {
+            display: block;
+            padding: 10px 20px;
+            text-decoration: none;
+            color: #333;
+        }
+
+        .dropdown-menu li a:hover {
+            background-color: #f0f0f0;
+        }
+
+        /* Newsroom specific styles */
+        .newsroom-container {
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        .news-post-title {
+            color: #ffd700; /* Default Yellow */
+            margin-top: 0;
+            margin-bottom: 10px;
+            border-bottom: 2px solid #ffd700;
+            padding-bottom: 10px;
+        }
+
+        .news-post-date {
+            color: #777; /* Lighter color for date */
+            font-size: 0.9em;
+            margin-bottom: 20px;
+        }
+
+        .news-post-content {
+            line-height: 1.6;
+        }
+
+        .news-post-content p {
+            margin-bottom: 15px;
+        }
+
+        .post-not-found {
+            text-align: center;
+            color: #e74c3c; /* Red for error */
+            font-weight: bold;
+        }
+
+        .recent-posts-list {
+            list-style: none;
+            padding: 0;
+            margin-top: 20px;
+            border-top: 1px solid #eee;
+            padding-top: 15px;
+        }
+
+        .recent-posts-list li {
+            margin-bottom: 10px;
+        }
+
+        .recent-posts-list li a {
+            color: #3498db; /* Example link color */
+            text-decoration: none;
+        }
+
+        .recent-posts-list li a:hover {
+            text-decoration: underline;
+        }
+
+    </style>
+</head>
+<body>
+    <nav class="tool-nav">
+        <img src="assets/logo.png" alt="Jcode Logo" class="logo-tab">
+        <a href="index.html" class = "tab">Home</a>
+        <a href="mailto:contactjbluebird@icloud.com" class = "tab">Contact</a>
+        <a href="credits.html" class = "tab">Credits</a>
+        <a href="Jcode 2.0/index.html" class = "tab">Try out Jcode</a>
+    <main> <div class="newsroom-container">
+            <h1 id="post-title" class="news-post-title"></h1>
+            <p id="post-date" class="news-post-date"></p>
+            <div id="post-content" class="news-post-content">
+                </div>
+            <div id="not-found-message" class="post-not-found" style="display: none;">
+                <p>News post not found or no post specified.</p>
+                <h2>Recent Posts</h2>
+                <ul id="recent-posts" class="recent-posts-list">
+                    </ul>
+            </div>
+        </div>
+    </main>
+
+    <script>
+        // News article data embedded directly in the script
+        const newsData = {
+            "1": {
+                "title": "Jcode Beta is Out!",
+                "date": "2025-04-18",
+                "content": "<p>We are thrilled to announce the official launch of Jcode Beta, marking a significant milestone in our journey to make coding accessible and fun for everyone! Jcode is designed as a vibrant platform where aspiring young developers can dive into the world of programming, offering intuitive tools and a supportive community to nurture their creativity. This beta phase represents a crucial step, allowing us to gather invaluable feedback from our early users to refine and enhance the Jcode experience. During the beta, you'll have the opportunity to explore our core coding environment, experiment with various programming concepts through interactive activities, and connect with other learners and creators. We've poured countless hours into building a foundation that is both educational and engaging, and now, with the beta release, we invite you to be a part of shaping its future. Your experiences, suggestions, and creations during this period will directly influence the final version of Jcode, helping us to build the best possible platform for learning and sharing the joy of coding. We encourage you to jump in, explore, build, and share your exciting projects – your participation is key to making Jcode a thriving hub for the next generation of coders!</p>"
+            }
+            "2": {
+                "title": "Maybe a AI Block?",
+                "date": "2025-04-18",
+                "content": "<p>JBlueBird: 'How about we create a AI block, JBlueBro?' JBlueBro: 'Yesss' JBlueBird: 'Ooops! Is this recorder on? *clicks the recorder off so nothing gets leaked*'</p>"
+            }
+            // Add more articles here using unique IDs as keys
+        };
+
+        const newsroomBaseUrl = 'newsroom.html?post='; // Base URL for news posts
+
+        function displayNewsPost() {
+            const urlParams = new URLSearchParams(window.location.search);
+            const postId = urlParams.get('post');
+            const postTitleElement = document.getElementById('post-title');
+            const postDateElement = document.getElementById('post-date');
+            const postContentElement = document.getElementById('post-content');
+            const notFoundMessageElement = document.getElementById('not-found-message');
+            const recentPostsListElement = document.getElementById('recent-posts');
+
+
+            if (postId && newsData[postId]) {
+                // Display the specific news post
+                const post = newsData[postId];
+                postTitleElement.textContent = post.title || 'Untitled Post';
+                postDateElement.textContent = post.date ? `Published: ${post.date}` : '';
+                postContentElement.innerHTML = post.content || '<p>No content available.</p>'; // Use innerHTML for HTML content
+                notFoundMessageElement.style.display = 'none'; // Hide the not found message
+
+                // Hide the "Recent Posts" heading if a specific post is displayed
+                const recentPostsHeading = notFoundMessageElement.querySelector('h2');
+                if (recentPostsHeading) {
+                    recentPostsHeading.style.display = 'none';
+                }
+            } else {
+                // Post not found or no ID specified, show message and list recent posts
+                postTitleElement.style.display = 'none';
+                postDateElement.style.display = 'none';
+                postContentElement.style.display = 'none';
+                notFoundMessageElement.style.display = 'block';
+
+                 // Ensure "Recent Posts" heading is shown if not found message is displayed
+                const recentPostsHeading = notFoundMessageElement.querySelector('h2');
+                if (recentPostsHeading) {
+                    recentPostsHeading.style.display = 'block';
+                }
+
+
+                if (recentPostsListElement) {
+                    recentPostsListElement.innerHTML = ''; // Clear any existing list
+                    const postIds = Object.keys(newsData);
+
+                    // Sort posts by date if dates are in a comparable format (e.g.,-MM-DD)
+                     postIds.sort((a, b) => {
+                        const dateA = new Date(newsData[a].date);
+                        const dateB = new Date(newsData[b].date);
+                        return dateB - dateA; // Sort in descending order (most recent first)
+                    });
+
+                    const recentPostCount = Math.min(postIds.length, 5); // Display up to 5 recent posts
+
+
+                    if (postIds.length > 0) {
+                         for (let i = 0; i < recentPostCount; i++) {
+                            const recentPostId = postIds[i];
+                            const recentPost = newsData[recentPostId];
+                            const listItem = document.createElement('li');
+                            const postLink = document.createElement('a');
+                            postLink.href = `${newsroomBaseUrl}${recentPostId}`;
+                            postLink.textContent = recentPost.title || 'Untitled Post';
+                            listItem.appendChild(postLink);
+                            recentPostsListElement.appendChild(listItem);
+                        }
+                    } else {
+                        const listItem = document.createElement('li');
+                        listItem.textContent = 'No news posts available.';
+                        recentPostsListElement.appendChild(listItem);
+                    }
+                }
+            }
+        }
+
+        document.addEventListener('DOMContentLoaded', displayNewsPost);
+    </script>
+</body>
+</html>
